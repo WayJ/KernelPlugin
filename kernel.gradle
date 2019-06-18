@@ -1,0 +1,29 @@
+allprojects {
+    repositories {
+        maven { url 'http://114.215.249.96:9999/nexus/content/repositories/releases/' }
+    }
+}
+ext.deps = [:]
+def selfVersions = [:]
+selfVersions.kernel = "0.6.2"
+selfVersions.kernel_network = "1.3"
+selfVersions.kernel_adapter_view = "0.6.1"
+selfVersions.inputBinder = "3.8.0"
+selfVersions.inputBinder_view = "3.0.4"
+selfVersions.tqRouter = "2.8.2"
+selfVersions.rxjava2 = "2.1.7"
+selfVersions.rx_android = "2.0.2"
+selfVersions.retrofit = "2.4.0"
+selfVersions.fastjson = "1.1.56.android"
+selfVersions.flycoDialog = "1.3.2@aar"
+selfVersions.magicIndicator = "1.5.0"
+selfVersions.switchbutton = "2.0.0"
+selfVersions.ijkplayer = "0.8.4"
+selfVersions.transition = "1.7.0"
+selfVersions.flexbox = "0.3.0"
+selfVersions.tinypinyin = "2.0.3"
+ext.kernelVersions = selfVersions
+def deps = [:]
+def kernel = [:]
+kernel.core = "com.tianque.android:kernel-core:$kernelVersions.kernel"
+deps.kernel = kernel
